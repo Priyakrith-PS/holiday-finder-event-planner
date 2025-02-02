@@ -33,5 +33,10 @@ A web application for discovering global holidays and planning personal events w
 - User Authentication 
 - Could integrate a tour planning feature
 
+## Screenshots
 
-
+![image alt](https://github.com/Priyakrith-PS/holiday-finder-event-planner/blob/1a8513b2b51c1fcaca7d6cbb98c4701395d27c9d/Screenshot%202025-02-02%20205526.png)
+![image alt](https://github.com/Priyakrith-PS/holiday-finder-event-planner/blob/1a8513b2b51c1fcaca7d6cbb98c4701395d27c9d/Screenshot%202025-02-02%20205727.png)
+![image alt](https://github.com/Priyakrith-PS/holiday-finder-event-planner/blob/1a8513b2b51c1fcaca7d6cbb98c4701395d27c9d/Screenshot%202025-02-02%20205825.png)
+![image alt](https://github.com/Priyakrith-PS/holiday-finder-event-planner/blob/1a8513b2b51c1fcaca7d6cbb98c4701395d27c9d/Screenshot%202025-02-02%20205925.png)
+![image alt](https://github.com/Priyakrith-PS/holiday-finder-event-planner/blob/1a8513b2b51c1fcaca7d6cbb98c4701395d27c9d/Screenshot%202025-02-02%20210018.png)
