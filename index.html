@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holiday Finder & Event Planner</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h3>📅 Existing Events</h3>
+      <ul id="events"></ul>
+    </div>
+
+    <div class="container">
+      <h1>🌍 Holiday Finder & Event Planner</h1>
+      <div class="search-container">
+        <select id="countrySelect" class="styled-select">
+          <option value="">Select Country</option>
+        </select>
+        <select id="holidayType" class="styled-select">
+          <option value="national">National</option>
+          <option value="local">Local</option>
+          <option value="religious">Religious</option>
+          <option value="observance">Observance</option>
+        </select>
+        <input type="date" id="startDate" class="styled-input" />
+        <input type="date" id="endDate" class="styled-input" />
+        <button id="searchButton" class="styled-button">
+          🔍 Search Holidays
+        </button>
+      </div>
+      <div class="results" id="results"></div>
+    </div>
+
+    <!-- Event Creation Popup -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h3>Create New Event</h3>
+        <input
+          type="text"
+          id="eventName"
+          placeholder="Event Name"
+          class="styled-input"
+        />
+        <textarea
+          id="eventDetails"
+          placeholder="Event Details"
+          class="styled-textarea"
+        ></textarea>
+        <div class="button-group">
+          <button id="saveEventButton" class="styled-button">💾 Save</button>
+          <button id="closePopupButton" class="styled-button secondary">
+            ✖ Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Event Details Popup -->
+    <div id="detailsPopup" class="popup">
+      <div class="popup-content details-content">
+        <h2 id="detailsTitle"></h2>
+        <div class="details-body">
+          <p><strong>📅 Date:</strong> <span id="detailsDate"></span></p>
+          <p>
+            <strong>📝 Description:</strong>
+            <span id="detailsDescription"></span>
+          </p>
+          <p>
+            <strong>📍 Location:</strong> <span id="detailsLocation"></span>
+          </p>
+          <p><strong>🔖 Type:</strong> <span id="detailsType"></span></p>
+        </div>
+        <button id="closeDetailsPopup" class="styled-button secondary">
+          ✖ Close
+        </button>
+      </div>
+    </div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
