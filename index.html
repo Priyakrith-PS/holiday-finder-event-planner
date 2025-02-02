@@ -11,11 +11,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Toggle Calendar Button (always visible) -->
+    <button id="calendarToggle" class="styled-button">
+      📅 Toggle Calendar
+    </button>
+
+    <!-- Sidebar: Existing Events -->
     <div class="sidebar">
       <h3>📅 Existing Events</h3>
       <ul id="events"></ul>
     </div>
 
+    <!-- Main Content Area -->
     <div class="container">
       <h1>🌍 Holiday Finder & Event Planner</h1>
       <div class="search-container">
@@ -37,27 +44,47 @@
       <div class="results" id="results"></div>
     </div>
 
+    <!-- Calendar Overlay (covers viewport except sidebar) -->
+    <div id="calendarContainer" class="calendar-container">
+      <!-- Calendar Header: Pagination & Close -->
+      <div class="calendar-header">
+        <button id="prevMonth" class="nav-button">◀</button>
+        <span id="currentMonth" class="month-display"></span>
+        <button id="nextMonth" class="nav-button">▶</button>
+        <button
+          id="closeCalendar"
+          class="styled-button secondary close-calendar"
+        >
+          ✖ Close
+        </button>
+      </div>
+
+      <!-- Calendar Filter Area (no search button; updates dynamically) -->
+      <div class="calendar-search">
+        <select id="calendarCountrySelect" class="styled-select">
+          <option value="">Select Country</option>
+        </select>
+        <select id="calendarHolidayType" class="styled-select">
+          <option value="national">National</option>
+          <option value="local">Local</option>
+          <option value="religious">Religious</option>
+          <option value="observance">Observance</option>
+        </select>
+        <!-- Error area for dynamic messages -->
+        <div id="calendarSearchError" class="error"></div>
+      </div>
+
+      <!-- Calendar Days Grid -->
+      <div id="calendarDays" class="days-grid"></div>
+
+      <!-- Holiday List View (below the calendar) -->
+      <div id="holidayList" class="holiday-list"></div>
+    </div>
+
     <!-- Event Creation Popup -->
     <div id="popup" class="popup">
       <div class="popup-content">
-        <h3>Create New Event</h3>
-        <input
-          type="text"
-          id="eventName"
-          placeholder="Event Name"
-          class="styled-input"
-        />
-        <textarea
-          id="eventDetails"
-          placeholder="Event Details"
-          class="styled-textarea"
-        ></textarea>
-        <div class="button-group">
-          <button id="saveEventButton" class="styled-button">💾 Save</button>
-          <button id="closePopupButton" class="styled-button secondary">
-            ✖ Close
-          </button>
-        </div>
+        <!-- Dynamically generated content -->
       </div>
     </div>
 
